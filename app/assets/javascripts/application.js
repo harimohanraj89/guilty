@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  $('#button button').click(function() {
+    $.get('/random').done(function(data) {
+      $('#pleasure textarea').val(data.text);
+      $('#button button').blur();
+    });
+  });
+})
