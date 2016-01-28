@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :guilty_pleasures, only: [:index]
+  root to: 'application#index'
+  get 'random', to: 'guilty_pleasures#random'
 end

@@ -1,5 +1,5 @@
 class GuiltyPleasuresController < ApplicationController
-  def index
-    render json: GuiltyPleasure.all
+  def random
+    render json: GuiltyPleasure.all.sample
   end
 end
